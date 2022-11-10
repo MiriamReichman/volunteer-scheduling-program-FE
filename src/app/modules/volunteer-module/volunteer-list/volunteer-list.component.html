@@ -1,0 +1,23 @@
+<ul class="list-group">
+    <li class="list-group-item" [class.list-group-item-success]="volunteer.active" 
+        *ngFor="let volunteer of Volunteeres">
+        <div class="row">
+            <div class="col-sm-2">
+
+                {{volunteer.id}}
+            </div>
+            <div class="col-sm-3">
+                {{volunteer.firstName}}
+            </div>
+            <div class="col-sm-3">
+                {{volunteer.lastName}}
+            </div>
+
+            <div class="col-sm-2">
+             
+                <button class="btn btn-primary" 
+                    routerLink="/volunteer/details/GetByID/{{volunteer.id}}">Edit</button>
+            </div>
+        </div>
+    </li>
+</ul>

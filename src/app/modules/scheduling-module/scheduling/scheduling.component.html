@@ -1,0 +1,83 @@
+<html>
+<br><br>
+<div style="background-color: rgb(97, 238, 128); height: 85px;text-align:center;font-size: medium;">
+    <br>
+    <h1 style="font-size: 30px; text-align: center; text-align-last: center; color: rgba(255, 245, 245, 100);">מערכת
+        שיבוץ מתנדבים</h1>
+</div>
+<br><br>
+<br><br>
+<div [formGroup]="myGroup">
+
+    <div class="container"  >
+        <label style="font-size:xx-large; text-align: center; color:rgb(10, 77, 40);"
+            [class.list-group-item-success]="myGroup.controls.sunday.value">sunday</label>
+        <select formControlName="sunday" class="list-group-item" required style="margin-left:47%;" >
+       
+            <option *ngFor="let volunteer of PotentionalVolunteer[0]">
+                <p>{{volunteer.firstName}}</p>
+            </option>
+        </select>
+        <label
+            style="font-size: xx-large; text-align: center; color:rgb(10, 77, 40);font-family: Arial, Helvetica, sans-serif;"
+            [class.list-group-item-success]="myGroup.controls.monday.value">monday</label>
+        <select formControlName="monday" class="list-group-item" required style="margin-left:47%;">
+        
+            <option *ngFor="let volunteer of PotentionalVolunteer[1]">
+                <p>{{volunteer.firstName}}</p>
+            </option>
+
+        </select>
+        <label style="font-size: xx-large; text-align: center; color:rgb(10, 77, 40);"
+            [class.list-group-item-success]="myGroup.controls.tuesday.value">tuesday</label>
+        <select formControlName="tuesday" class="list-group-item" required style="margin-left:47%;">
+        
+            <option *ngFor="let volunteer of PotentionalVolunteer[2]">
+                <p>{{volunteer.firstName}}</p>
+            </option>
+
+        </select>
+        <label style="font-size: xx-large; text-align: center; color:rgb(10, 77, 40);"
+            [class.list-group-item-success]="myGroup.controls.wensday.value">wensday</label>
+        <select formControlName="wensday" class="list-group-item" required style="margin-left:47%;">
+       
+            <option *ngFor="let volunteer of PotentionalVolunteer[3]">
+                <p>{{volunteer.firstName}}</p>
+            </option>
+
+        </select>
+        <label style="font-size: xx-large; text-align: center; color:rgb(10, 77, 40);"
+            [class.list-group-item-success]="myGroup.controls.thursday.value">thursday</label>
+        <select formControlName="thursday" class="list-group-item" required style="margin-left:47%;">
+         
+            <option *ngFor="let volunteer of PotentionalVolunteer[4]">
+                <p>{{volunteer.firstName}}</p>
+            </option>
+
+        </select>
+        <label style="font-size: xx-large; text-align: center; color:rgb(10, 77, 40);"
+            [class.list-group-item-success]="myGroup.controls.friday.value" >friday</label>
+        <select formControlName="friday" class="list-group-item" required style="margin-left:47%;">
+         
+            <option *ngFor="let volunteer of PotentionalVolunteer[5]">
+                <p>{{volunteer.firstName}}</p>
+            </option>
+
+        </select>
+        <label style="font-size: xx-large; text-align: center; color:rgb(10, 77, 40);"
+            [class.list-group-item-success]="myGroup.controls.shabbes.value">shabbes</label>
+        <select formControlName="shabbes" class="list-group-item" required style="margin-left:47%;">
+            
+            <option *ngFor="let volunteer of PotentionalVolunteer[6]">
+                <p>{{volunteer.firstName}}</p>
+            </option>
+
+        </select>
+        <br><br>
+
+        <button style="margin-left: 3%;" (click)="SaveSchedule()">Save Scheduling</button>
+   
+    </div>
+</div>
+
+</html>
